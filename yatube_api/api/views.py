@@ -38,7 +38,7 @@ class GroupViewSet(viewsets.ReadOnlyModelViewSet):
 
 
 class FollowViewSet(mixins.CreateModelMixin, mixins.ListModelMixin,
-                 viewsets.GenericViewSet):
+                    viewsets.GenericViewSet):
     queryset = Follow.objects.all()
     serializer_class = FollowSerializer
     permission_classes = (permissions.IsAuthenticated,)

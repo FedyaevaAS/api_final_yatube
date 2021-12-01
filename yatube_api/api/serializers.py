@@ -24,7 +24,7 @@ class CommentSerializer(serializers.ModelSerializer):
 
 
 class GroupSerializer(serializers.ModelSerializer):
-    
+
     class Meta:
         fields = '__all__'
         model = Group
@@ -42,10 +42,10 @@ class FollowSerializer(serializers.ModelSerializer):
     class Meta:
         fields = ('user', 'following',)
         model = Follow
-    
+
     def validate_following(self, value):
-        user=User.objects.get(username=self.context['request'].user)
-        following=User.objects.get(username=value)
+        user = User.objects.get(username=self.context['request'].user)
+        following = User.objects.get(username=value)
         if Follow.objects.filter(
             user=user,
             following=following
