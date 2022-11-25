@@ -1,6 +1,14 @@
-# yatube_api
+# Yatube_api
+
 ### Описание
 API для платформы Yatube
+
+### Стек
+- Python
+- Django
+- Django REST framework
+- SQLite
+
 ### Как запустить проект
 - Клонировать репозиторий и перейти в него в командной строке:
 ```
@@ -46,3 +54,5 @@ py manage.py runserver
     "group": 0
 }
 ```
+### Автор
+Федяева Анастасия
